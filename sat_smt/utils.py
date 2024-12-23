@@ -1,4 +1,4 @@
-from z3 import sat, Solver
+from z3 import sat, Solver, Optimize
 
 
 def unique_solution(solver, variables):
@@ -22,6 +22,8 @@ def unique_solution(solver, variables):
     return True
 
 
-def print_if_solvable(solver: Solver):
-    if solver.check() == sat:
+def print_if_solvable(solver: Solver | Optimize):
+    check = solver.check()
+    print(check)
+    if check == sat:
         print(solver.model())

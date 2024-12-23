@@ -1,5 +1,5 @@
 from z3 import *
-from examples.utils import unique_solution
+from sat_smt.utils import unique_solution
 
 x1, x2, x3, x4 = Bools('x1 x2 x3 x4')
 

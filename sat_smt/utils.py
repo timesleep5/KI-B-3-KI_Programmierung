@@ -1,4 +1,4 @@
-from z3 import sat
+from z3 import sat, Solver
 
 
 def unique_solution(solver, variables):
@@ -20,3 +20,8 @@ def unique_solution(solver, variables):
             return False
         solver.pop()
     return True
+
+
+def print_if_solvable(solver: Solver):
+    if solver.check() == sat:
+        print(solver.model())

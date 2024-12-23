@@ -1,5 +1,5 @@
 from z3 import *
-from utils import unique_solution
+from sat_smt.utils import unique_solution
 
 x, y, z = Reals('x y z')
 

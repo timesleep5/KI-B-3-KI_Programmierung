@@ -1,5 +1,5 @@
 from z3 import *
-from utils import unique_solution
+from sat_smt.utils import unique_solution
 
 n, m, p = Ints('n m p')
 solver = Solver()

@@ -1,5 +1,4 @@
 from z3 import *
-from utils import unique_solution
 
 a, b, c, x = Reals('a b c x')
 equation = b ** 2 * x ** 2 + (b ** 2 + c ** 2 - a ** 2) * x + c ** 2 == 0

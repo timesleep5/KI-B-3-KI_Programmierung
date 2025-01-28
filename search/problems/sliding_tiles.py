@@ -1,8 +1,6 @@
+from dataclasses import dataclass
 from random import choice
-from typing import List, Tuple
-
-from attr import dataclass
-from typing_extensions import override
+from typing import List, Tuple, override
 
 from search.algorithms.breadth_first_search import BreadthFirstSearch
 from search.search import State, Printer

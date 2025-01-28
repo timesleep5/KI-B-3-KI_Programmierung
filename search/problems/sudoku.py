@@ -1,6 +1,5 @@
+from dataclasses import dataclass
 from typing import Tuple, override, List
-
-from attr import dataclass
 
 from search.algorithms.breadth_first_search import BreadthFirstSearch
 from search.algorithms.depth_first_search import DepthFirstSearch
@@ -81,8 +80,8 @@ if __name__ == '__main__':
     breadth_path = Timer.timer(lambda: breadth_first_search.search(start), 'breadth first search')
     depth_path = Timer.timer(lambda: depth_first_search.search(start), 'depth first search')
 
-    # print('Breadth first search path:')
-    # Printer.print(breadth_path)
+    print('Breadth first search path:')
+    Printer.print(breadth_path)
     #
     # print('Depth first search path:')
     # Printer.print(depth_path)

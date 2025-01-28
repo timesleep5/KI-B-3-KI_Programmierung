@@ -1,6 +1,5 @@
+from dataclasses import dataclass
 from typing import Tuple, override, List
-
-from attr import dataclass
 
 from search.algorithms.a_star_search import AStarSearch
 from search.algorithms.breadth_first_search import BreadthFirstSearch
@@ -56,8 +55,8 @@ if __name__ == '__main__':
     breadth_path = Timer.timer(lambda: breadth_first_search.search(start), 'breadth first search')
     a_star_path = Timer.timer(lambda: a_star_search.search(start), 'A* search (basically depth first by filter)')
 
-    # print('Breadth first search path:')
-    # Printer.print(breadth_path)
+    print('Breadth first search path:')
+    Printer.print(breadth_path)
     #
     # print('A* search path:')
     # Printer.print(a_star_path)
